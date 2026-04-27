@@ -6,9 +6,6 @@
  *   GET  /orders      list orders (simulates 5–50ms DB read)
  *   POST /orders      create order (simulates 10–80ms DB write, validates body)
  *   GET  /health      liveness check; reports heap and uptime
- *
- * Set MONITORING_ENABLED=true to enable the monitoring integration.
- * The server must start cleanly without it (needed for the baseline run).
  */
 
 import express, { NextFunction, Request, Response } from "express";
