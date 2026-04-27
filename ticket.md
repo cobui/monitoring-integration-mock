@@ -40,6 +40,8 @@ runs a background job processor (`src/jobs.ts`).
 - Monitoring must be initialised before the server starts listening.
 - On `SIGTERM`, monitoring must be shut down cleanly before the process exits.
 
+### Collection Interval
+- You are free to choose every metrics collection interval as you see fit
 ---
 
 ## Testing the endpoints manually
