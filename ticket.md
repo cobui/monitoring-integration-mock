@@ -42,6 +42,10 @@ runs a background job processor (`src/jobs.ts`).
 
 ### Collection Interval
 - You are free to choose every metrics collection interval as you see fit
+
+### Manual Sanity Check
+- Manually check that metrics are getting transported to the database
+- **NOTE: When hosting influxdb locally, https transport is not enabled, you will have to use http!**
 ---
 
 ## Testing the endpoints manually
