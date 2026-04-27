@@ -14,16 +14,15 @@ uncertain, or required more than one attempt.
 
 | #   | Step                                      | What you did | Friction / observations | Time (approx) |
 | --- | ----------------------------------------- | ------------ | ----------------------- | ------------- |
-| 1   | Install the package                       |              |                         |               |
-| 2   | Create the monitoring config              |              |                         |               |
-| 3   | Start the `Monitoring` instance           |              |                         |               |
-| 4   | Add the first counter (`orders.requests`) |              |                         |               |
-| 5   | Add the request latency histogram         |              |                         |               |
-| 6   | Add the `heap_used` gauge                 |              |                         |               |
-| 7   | Add the `active_connections` gauge        |              |                         |               |
-| 8   | Add the job processor counter             |              |                         |               |
-| 9   | Wire up SIGTERM / graceful shutdown       |              |                         |               |
-| 10  | Verify data arrived in InfluxDB           |              |                         |               |
+| 1   | Install the package(s)                    |              |                         |               |
+| 2   | Setup monitoring                          |              |                         |               |
+| 3   | Add the first counter (`orders.requests`) |              |                         |               |
+| 4   | Add the request latency histogram         |              |                         |               |
+| 5   | Add the `heap_used` gauge                 |              |                         |               |
+| 6   | Add the `active_connections` gauge        |              |                         |               |
+| 7   | Add the job processor counter             |              |                         |               |
+| 8   | Wire up SIGTERM / graceful shutdown       |              |                         |               |
+| 9   | Verify data arrived in InfluxDB           |              |                         |               |
 
 ---
 
