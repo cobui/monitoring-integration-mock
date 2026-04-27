@@ -63,11 +63,8 @@ async function dbWrite(item: string, quantity: number): Promise<Order> {
 
 // GET /orders — list all orders.
 app.get("/orders", async (req: Request, res: Response, next: NextFunction) => {
-  const start = Date.now();
   try {
     const orders = await dbRead();
-    const duration = Date.now() - start;
-    void duration;
 
     res.json({ data: orders, count: orders.length });
   } catch (err) {
@@ -124,11 +121,9 @@ const server = http.createServer(app);
 
 server.on("connection", (socket) => {
   activeConnections++;
-  void activeConnections;
-
+  
   socket.on("close", () => {
     activeConnections--;
-    void activeConnections;
   });
 });
 
