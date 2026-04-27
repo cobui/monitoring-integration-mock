@@ -48,12 +48,7 @@ docker run -d \
   influxdb:2
 ```
 
-**Or install natively on macOS:**
-
-```bash
-brew install influxdb
-brew services start influxdb
-```
+**Or install via installation guide at [https://docs.influxdata.com/influxdb/v2/install/](https://docs.influxdata.com/influxdb/v2/install/)**
 
 Once running, open **http://localhost:8086** in your browser to complete the setup wizard:
 
