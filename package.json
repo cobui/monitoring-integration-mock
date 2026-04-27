@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register src/server.ts",
+    "start": "ts-node -r tsconfig-paths/register src/server.ts"
   },
   "dependencies": {
     "express": "^4.21.2"
