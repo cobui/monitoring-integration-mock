@@ -147,10 +147,12 @@ If nothing appears after 30 seconds of traffic, check:
 
 ---
 
-## Installing the monitoring package
+## Installing the monitoring packages
 
 ```bash
 npm install @cobui/node-monitoring
 ```
 
 The package README and full API reference are at [npmjs.com/package/@cobui/node-monitoring](https://www.npmjs.com/package/@cobui/node-monitoring).
+
+The documentation for OpenTelemtry regarding nodejs can be found at [opentelemetry.io/docs/languages/js/getting-started/nodejs/](https://opentelemetry.io/docs/languages/js/getting-started/nodejs/)
