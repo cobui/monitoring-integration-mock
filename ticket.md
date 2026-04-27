@@ -9,7 +9,6 @@
 
 We are integrating the internal monitoring package into the order-service to get visibility into
 request throughput, latency, resource usage, and background job activity.
-The monitoring package is already available as a local dependency — see `package.json`.
 
 The service exposes three HTTP endpoints (`GET /orders`, `POST /orders`, `GET /health`) and
 runs a background job processor (`src/jobs.ts`).
@@ -96,3 +95,4 @@ done
 ## Notes
 
 - Tag metrics with enough context (e.g. route name) so results can be filtered per-endpoint in InfluxDB.
+- Before you start the implementation, take up to 10 minutes to familiarize yourself with relevant concepts like what types of metrics exist (counter, histogram, etc) and what type of metric you should use for the data you want to track.
