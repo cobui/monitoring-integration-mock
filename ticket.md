@@ -40,8 +40,14 @@ runs a background job processor (`src/jobs.ts`).
 - Monitoring must be initialised before the server starts listening.
 - On `SIGTERM`, monitoring must be shut down cleanly before the process exits.
 
-### Collection Interval
+### Collection & Transport configuration
 - You are free to choose every metrics collection interval as you see fit
+- There is no set ratelimit for transporting the metric data to the database - you can flush collected data anytime
+
+## Dataschema in Influx
+- Influx uses the line protocol, where every datapoint is structured like this:
+  `<measurement_name>,<field_value_name>=<value>,...,<tag_value_name>=<value> <timestamp>`
+- The `<measurement_name>`should be the same for all metrics and should be called `order_service`
 
 ### Manual Sanity Check
 - Manually check that metrics are getting transported to the database
