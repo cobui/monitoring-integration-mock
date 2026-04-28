@@ -1,8 +1,9 @@
-**Which integration felt closer to "just adding a few lines"?**
-- 
+## Overall comparison
 
-**Which produced more boilerplate you didn't feel you understood?**
-- 
+**Which package felt easier to integrate and why:**
 
-**If you were starting a new project tomorrow, which would you reach for and why?**
-- 
+-
+
+**Which package felt less complex conceptually to understand and why:**
+
+-
