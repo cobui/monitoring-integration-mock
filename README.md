@@ -39,16 +39,7 @@ Or download the installer directly from [nodejs.org](https://nodejs.org).
 
 The monitoring package ships data to InfluxDB. You need a local instance running before metrics will appear anywhere.
 
-**Install via Docker (easiest):**
-
-```bash
-docker run -d \
-  --name influxdb \
-  -p 8086:8086 \
-  influxdb:2
-```
-
-**Or install via installation guide at [https://docs.influxdata.com/influxdb/v2/install/](https://docs.influxdata.com/influxdb/v2/install/)**
+**Install via installation guide at [https://docs.influxdata.com/influxdb/v2/install/](https://docs.influxdata.com/influxdb/v2/install/)**
 
 Once running, open **http://localhost:8086** in your browser to complete the setup wizard:
 
