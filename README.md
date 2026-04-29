@@ -142,3 +142,4 @@ npm install @cobui/node-monitoring
 The package README and full API reference are at [npmjs.com/package/@cobui/node-monitoring](https://www.npmjs.com/package/@cobui/node-monitoring).
 
 The documentation for OpenTelemtry regarding nodejs can be found at [opentelemetry.io/docs/languages/js/getting-started/nodejs/](https://opentelemetry.io/docs/languages/js/getting-started/nodejs/)
+**HINT**: the `npx tsx --import ./<file>` referenced in the OTeL docu should be replaced with `ts-node --require ./src/<file>`. The command is defined in `package.json`
