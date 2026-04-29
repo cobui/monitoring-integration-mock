@@ -41,8 +41,8 @@ runs a background job processor (`src/jobs.ts`).
 - On `SIGTERM`, monitoring must be shut down cleanly before the process exits.
 
 ### Collection & Transport configuration
-- You are free to choose every metrics collection interval as you see fit
-- There is no set ratelimit for transporting the metric data to the database - you can flush collected data anytime
+- You are free to choose every metrics collection interval as you see fit. **BUT** You must ensure that the collection interval per metric is identical for both package integrations!
+- Enforce a standard rate limit of 10 requests per second. The rate limit is allowed to be violated when flushing metric records is necessary to prevent data loss, for example when monitoring short lived processes (like `jobs.ts`)
 
 ## Dataschema in Influx
 - Influx uses the line protocol, where every datapoint is structured like this:
