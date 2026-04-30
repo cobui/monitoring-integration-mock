@@ -6,7 +6,7 @@
     "start": "ts-node src/server.ts"
   },
   "dependencies": {
-    "@cobui/node-monitoring": "^1.1.0",
+    "@cobui/node-monitoring": "^1.1.2",
     "express": "^4.21.2"
   },
   "devDependencies": {
