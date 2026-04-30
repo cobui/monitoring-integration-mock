@@ -18,18 +18,7 @@ Check if Node is installed:
 node --version
 ```
 
-If the command is not found, install Node via [nvm](https://github.com/nvm-sh/nvm) (recommended):
-
-```bash
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-# Restart your terminal, then install Node
-nvm install 22
-nvm use 22
-```
-
-Or download the installer directly from [nodejs.org](https://nodejs.org).
+If the command is not found, download the installer directly from [nodejs.org](https://nodejs.org).
 
 > **Common issue:** `npm`, `npx`, or `node` not found after install. In this case close and reopen your terminal, or run `source ~/.zshrc` (zsh) / `source ~/.bashrc` (bash).
 
