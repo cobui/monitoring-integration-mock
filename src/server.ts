@@ -10,7 +10,11 @@
 
 import express, { NextFunction, Request, Response } from "express";
 import http from "node:http";
+import { metrics } from "@opentelemetry/api";
 import { startJobProcessor } from "./jobs";
+
+
+
 
 // ---------------------------------------------------------------------------
 // App
@@ -18,6 +22,11 @@ import { startJobProcessor } from "./jobs";
 
 const app = express();
 app.use(express.json());
+
+const meter = metrics.getMeter("order-service", "1.0.0");
+const orderRequestsCounter = meter.createCounter("orders.requests.count", {
+  description: "Counts order endpoint requests by HTTP method",
+});
 
 // ---------------------------------------------------------------------------
 // Simulated data store
@@ -63,6 +72,8 @@ async function dbWrite(item: string, quantity: number): Promise<Order> {
 
 // GET /orders — list all orders.
 app.get("/orders", async (req: Request, res: Response, next: NextFunction) => {
+  orderRequestsCounter.add(1, { method: "GET", route: "/orders" });
+
   try {
     const orders = await dbRead();
 
@@ -74,6 +85,8 @@ app.get("/orders", async (req: Request, res: Response, next: NextFunction) => {
 
 // POST /orders — create a new order.
 app.post("/orders", async (req: Request, res: Response, next: NextFunction) => {
+  orderRequestsCounter.add(1, { method: "POST", route: "/orders" });
+
   const { item, quantity } = req.body as { item?: unknown; quantity?: unknown };
 
   if (typeof item !== "string" || item.length === 0) {
