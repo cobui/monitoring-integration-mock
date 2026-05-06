@@ -1,8 +1,7 @@
 # Integration Friction Log
 
-**Date:** ******\_\_\_\_******  
-**Package version:** ******\_\_\_\_******  
-**Time taken (total):** ******\_\_\_\_******
+**Date:** ******\28\04\2026******  
+**Time taken (total):**  **72 minutes**
 
 ---
 
@@ -12,8 +11,8 @@ Fill in each row as you work through the integration. The "friction" column is
 the most important: note anything that made you pause, look something up, feel
 uncertain, or required more than one attempt.
 
-| #   | Step                                      | What you did                                                                                                                                                                                                                                                                 | Friction / observations                                                                                                                                                                                    | Time (approx) |
-| --- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| #   | Step                                      | What you did                                                                                                                                                                                                                                                                 | Friction / observations                                                                                                                                                                                    |
+| --- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
 | 1   | Install the package(s)                    | I installed the example project, and the node-monitoring package. No problems there. I did encounter some problems with installing the InfluxDB database. Namely i forgot to check to use the correct version (only works with version 1 or 2, as version 3 needs licensure) | Backend database installation, InfluxDBv2 website actually points to docker website, where InfluxDBv3 is selected by default                                                                               |               |
 | 2   | Setup monitoring                          | Setting up the monitoring was pretty easy. I could use the example config and code with just one point of friction. In the local setup, InfluxDB uses http, not https, which needs to be configured in the configuration file of node-monitoring.                            | I misunderstood the advice or Readme and thought I had to change the configuration of InfluxDB. I dont think this would happen to somebody with experience with InfluxDB or in a professional environment. |               |
 | 3   | Add the first counter (`orders.requests`) | This was quite as I could easily adapt the example code. easy                                                                                                                                                                                                                |                                                                                                                                                                                                            |               |
